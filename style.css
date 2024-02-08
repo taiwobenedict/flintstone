@@ -104,12 +104,16 @@ img {
     align-items: center;
 }
 
+.hero-btn {
+  font-size: 2.2rem;
+}
+
 /* ABOUT */
 
 
 #about {
   background: url("images/footer.png") center center/cover no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   padding-top: 50px;
 }
@@ -120,12 +124,13 @@ img {
 }
 
 .side-vine {
-  top: -100px;
+  bottom: -200px;
   max-width: 500px;
+  z-index: 1;
 }
 
 .vines {
-  bottom: -100px;
+  bottom: -10%;
 }
 
 .about-img {
@@ -164,12 +169,14 @@ img {
   background-color: #b2c229;
   min-height: 100vh;
   padding-block: 5rem;
+  position: relative;
 }
 
 .token-img {
   max-width: 700px;
   margin-top: 40px;
   margin-inline: auto;
+  position: relative;
 }
 
 .heading {
@@ -184,6 +191,13 @@ img {
 
 .text {
   font-size: 1.5rem;
+}
+
+.flin {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  max-width: 200px;
 }
 
 /* FOOTER */
@@ -242,56 +256,32 @@ img {
   width: 300px;
 }
 
-@media (max-width: 990px) {
-  .btn,
-  .nav-link,
-  .hero-btn {
-    margin-bottom: 1rem;
+@media (max-width: 992px) {
+  .side-vine {
+    width: 300px;
+    bottom: -150px;
   }
-
-  .foot-text p {
-    font-size: 3.5rem;
-  }
+  
 }
 
 @media (max-width: 576px) {
-  .about-content p {
-    font-size: 0.9rem;
-  }
-
-  .about-content h1 {
-    font-size: 2rem;
-    margin-top: 10px;
-  }
-
-  .token-heading {
-    font-size: 2.3rem;
-    width: 300px;
-  }
-
-  .text-center.t1 {
-    display: none;
-  }
-
-  .text-center.t2 {
-    display: block;
-  }
-
-  .token-img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    width: 100%;
-  }
+ .flin {
+  position: static;
+  margin-inline: auto;
+  margin-top: 1rem;
 }
 
-@media (max-width: 756px) {
-  .text-center.t2 h1,
-  .text-center.t1 h1 {
-    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 3rem;
   }
+
+  .vines {
+    bottom: -3%;
+  }
+
 
   /* Mobile Display */
   .roadmap-img.img2 {
@@ -300,6 +290,10 @@ img {
 
   /* Desktop None */
   .roadmap-img.img1 {
+    display: none;
+  }
+
+  .side-vine {
     display: none;
   }
 }
