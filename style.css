@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -12,7 +12,7 @@ html {
 
 body {
   color: #000;
-  font-family: 'Rowdies', sans-serif;
+  font-family: "Rowdies", sans-serif;
   font-weight: 400;
 }
 
@@ -38,12 +38,24 @@ img {
   font-size: 1.3rem;
 }
 
+.transition {
+  transition: 0.4s;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
 /* HERO */
 
 #hero {
   position: relative;
   height: 100%;
 }
+
+
 
 #myVideo {
   position: absolute;
@@ -52,6 +64,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 
 .navbar {
@@ -60,6 +73,7 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
 }
 
 .logo {
@@ -75,33 +89,46 @@ img {
 }
 
 .navbar-links {
-    justify-content: space-between;
-    width: 80%;
+  justify-content: space-between;
+  width: 80%;
 }
 
-.nav-link {
+.nav-link, i {
   text-shadow: 1px 1px 0px #4946ab, -1px -1px 0px #4946ab, 1px -1px 0px #4946ab,
     -1px 1px 0px #4946ab;
   color: #ffc628;
   transition: 0.4s;
 }
 
-.nav-link:hover {
-    color: #ffc628;
-    transform: scale(1.05);
+.nav-link:hover, i:hover {
+  color: #ffc628;
+  transform: scale(1.05);
 }
 
 .social-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
 
 .hero-btns {
-    display: flex;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  flex-wrap: wrap;
+  padding-top: 200px;
 }
 
 .hero-btn {
@@ -109,7 +136,6 @@ img {
 }
 
 /* ABOUT */
-
 
 #about {
   background: url("images/footer.png") center center/cover no-repeat;
@@ -180,13 +206,11 @@ img {
 }
 
 .heading {
-  color: #E0B485;
+  color: #e0b485;
   text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000,
-  -1px 1px 0px #000;
+    -1px 1px 0px #000;
   font-weight: 700;
   font-size: 5rem;
-
-  
 }
 
 .text {
@@ -206,7 +230,6 @@ img {
   min-height: 100vh;
   background-position-x: right;
   background-position-y: top;
-
 }
 
 .footer-block {
@@ -244,6 +267,7 @@ img {
   line-height: 1.2;
 }
 
+
 .foot {
   position: absolute;
   display: flex;
@@ -257,23 +281,57 @@ img {
 }
 
 @media (max-width: 992px) {
+  #footer {
+    background-position-x: left;
+  }
   .side-vine {
     width: 300px;
     bottom: -150px;
   }
-  
+
+  .navbar-links,
+  .nav-links,
+  .social-links {
+    display: block;
+    width: 100%;
+  }
+
+  .btn {
+    margin-bottom: 1rem;
+  }
+
+  .social-links {
+    display: flex;
+  }
+
+  .navbar-links {
+    padding-top: 1rem;
+  }
+
+  .btn-container {
+    justify-content: start;
+    
+  }
 }
 
 @media (max-width: 576px) {
- .flin {
-  position: static;
-  margin-inline: auto;
-  margin-top: 1rem;
-}
+  .flin {
+    position: static;
+    margin-inline: auto;
+    margin-top: 1rem;
+  }
+
+  .heading {
+    font-size: 2rem !important;
+  }
 
 }
 
 @media (max-width: 768px) {
+  #hero {
+    background: url('images/hero-mobile.jpeg') center center/cover no-repeat;
+  }
+
   .heading {
     font-size: 3rem;
   }
@@ -281,7 +339,6 @@ img {
   .vines {
     bottom: -3%;
   }
-
 
   /* Mobile Display */
   .roadmap-img.img2 {
@@ -296,4 +353,12 @@ img {
   .side-vine {
     display: none;
   }
+
+  .hero-btn {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+ 
 }

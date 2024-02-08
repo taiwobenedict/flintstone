@@ -11,24 +11,20 @@
 
 <body>
 
-
-    <!-- Hero -->
-    <section id="hero">
-        <video autoplay muted loop id="myVideo">
-            <source src="images/hero.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content cus-container">
-            <div class="navbar navbar-expand-xl">
+    <!-- Header -->
+    <header>
+        <div class="cus-container">
+            <nav class="navbar navbar-expand-lg">
                 <div class="logo">
                     <img src="images/logo.png" alt="">
                 </div>
-
+    
                 <!-- Toggler -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                   </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+                <div class="collapse transition navbar-collapse" id="navbarSupportedContent">
                     <div class="navbar-links ml-auto">
       
                         <!-- Navigation Links -->
@@ -55,23 +51,28 @@
                         </div>
                     </div>
                 </div>
+    
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero -->
+    <section id="hero">
+        <video autoplay muted loop id="myVideo">
+            <source src="images/hero.mp4" type="video/mp4">
+        </video>
+        <div class="cus-container">
+           
+            <div class="btn-container h-100">
+                <div class="hero-btns">
+                    <button class="hero-btn btn">
+                        <a href="images/WhitepaperFlintstone.pdf" target="_blank" class="nav-link">WHITEPAPER</a>
+                    </button>
+                    <button class="hero-btn btn">
+                        <a href="#" class="nav-link">BUY NOW</a>
+                    </button>
+                </div> 
             </div>
-
-            <div class="row h-100">
-                <div class="col-md-6 h-100"></div>
-                <div class="col-md-6">
-                    <di class="hero-btns">
-                        <button class="hero-btn btn">
-                            <a href="images/WhitepaperFlintstone.pdf" target="_blank" class="nav-link">WHITEPAPER</a>
-                        </button>
-                        <button class="hero-btn btn">
-                            <a href="#" class="nav-link">BUY NOW</a>
-                        </button>
-                    </div> 
-                </div>
-            </div>
-
         </div>
         <img src="images/side-vine.png" class="side-vine vine" alt="">
     </section>
@@ -79,7 +80,7 @@
     <!-- About -->
     <div id="about">
        
-        <div class="row">
+        <div class="row m-0">
             <div class="col-md-4"></div>
             <div class="col-md-8">
                 <div class="about-img">
